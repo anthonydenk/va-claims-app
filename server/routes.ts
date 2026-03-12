@@ -194,11 +194,12 @@ export async function registerRoutes(
             pageReferences: pageRefs || undefined,
             interviewComplete: false,
             interviewMessages: [],
-            cfrAnalysis: {},
+            cfrAnalysis: { strengths: [], weaknesses: [] },
+            medicalEvidence: [],
           });
         }
       }
-      
+
       // If local parsing found fewer than 3 conditions, use Claude as backup
       if (conditions.length < 3) {
         try {
@@ -245,7 +246,8 @@ ${text.substring(0, 15000)}`
             status: "current",
             interviewComplete: false,
             interviewMessages: [],
-            cfrAnalysis: {},
+            cfrAnalysis: { strengths: [], weaknesses: [] },
+            medicalEvidence: [],
           }];
         }
       }
