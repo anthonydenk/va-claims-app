@@ -1,16 +1,4 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/public",
   "installCommand": "npm install",
-  "functions": {
-    "api/index.ts": {
-      "maxDuration": 60,
-      "includeFiles": "server/**,shared/**"
-    }
-  },
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
-  ]
+  "buildCommand": "npm run build"
 }
