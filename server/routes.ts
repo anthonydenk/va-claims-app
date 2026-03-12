@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import multer from "multer";
 import Anthropic from "@anthropic-ai/sdk";
 import { randomUUID } from "crypto";
-import type { Session, ClaimCondition, ServiceHistory, MedicalRecord, DiscoveredCondition } from "@shared/schema";
+import type { Session, ClaimCondition, ServiceHistory, MedicalRecord, DiscoveredCondition } from "../shared/schema";
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 50 * 1024 * 1024 } });
 const uploadMultiple = multer({ storage: multer.memoryStorage(), limits: { fileSize: 50 * 1024 * 1024 } });
