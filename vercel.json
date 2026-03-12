@@ -5,7 +5,8 @@
   "installCommand": "npm install",
   "functions": {
     "api/index.ts": {
-      "maxDuration": 60
+      "maxDuration": 60,
+      "includeFiles": "server/**,shared/**"
     }
   },
   "rewrites": [
